@@ -1,0 +1,36 @@
+{
+  "name": "event-calendar",
+  "version": "0.0.1",
+  "description": "Search most popular events which you have interest",
+  "main": "index.js",
+  "dependencies": {
+    "bookshelf": "0.9.1",
+    "config": "^1.10.0",
+    "lodash": "^3.10.1",
+    "log4js": "^0.6.24",
+    "mysql": "^2.4.3",
+    "knex": "0.9.0",
+    "koa": "latest",
+    "koa-body": "latest",
+    "koa-convert": "latest"
+  },
+  "devDependencies": {
+    "jscs": "^1.10.0",
+    "jshint": "^2.6.0",
+    "jshint-stylish": "^1.0.0",
+    "nodemon": "^1.2.1"
+  },
+  "scripts": {
+    "dev": "nodemon bin/www"
+  },
+  "keywords": [
+    "event",
+    "search",
+    "calendar",
+    "registration",
+    "news",
+    "update"
+  ],
+  "author": "Daniel Qin <taurencoder@gmail.com>",
+  "license": "ISC"
+}

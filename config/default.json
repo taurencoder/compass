@@ -1,0 +1,25 @@
+{
+  "app": {
+    "jwtSecret": "bolt backend api",
+    "cors": true,
+    "port": 9000
+  },
+  "log": {
+    "logLevel": "debug",
+    "logFileName": "local.log",
+    "maxLogSize": 2048000,
+    "backups": 10
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "127.0.0.1",
+      "charset": "utf8",
+      "user": "root",
+      "password": "",
+      "database": "event_calendar",
+      "timezone": "UTC"
+    },
+    "debug": false
+  }
+}
