@@ -1,34 +1,41 @@
 {
-  "name": "event-calendar",
+  "name": "event-compass",
   "version": "0.0.1",
-  "description": "Search most popular events which you have interest",
+  "description": "mass event organize & management system",
   "main": "index.js",
+  "babel": {
+    "ignore": [
+      "foo.js",
+      "bar/**/*.js"
+    ]
+  },
   "dependencies": {
-    "bookshelf": "0.9.1",
+    "bookshelf": "^0.9.1",
     "config": "^1.10.0",
     "lodash": "^3.10.1",
     "log4js": "^0.6.24",
     "mysql": "^2.4.3",
-    "knex": "0.9.0",
+    "knex": "^0.9.0",
     "koa": "latest",
     "koa-body": "latest",
     "koa-convert": "latest"
   },
   "devDependencies": {
+    "babel": "latest",
+    "babel-core": "^6.1.21",
+    "babel-cli": "latest",
     "jscs": "^1.10.0",
     "jshint": "^2.6.0",
     "jshint-stylish": "^1.0.0",
-    "nodemon": "^1.2.1"
+    "nodemon": "^1.8.1"
   },
   "scripts": {
-    "dev": "nodemon bin/www"
+    "start": "nodemon --exec babel-node -- bin/www"
   },
   "keywords": [
     "event",
-    "search",
-    "calendar",
-    "registration",
-    "news",
+    "management",
+    "flow",
     "update"
   ],
   "author": "Daniel Qin <taurencoder@gmail.com>",
