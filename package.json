@@ -12,14 +12,21 @@
   },
   "dependencies": {
     "bookshelf": "^0.9.1",
-    "config": "^1.10.0",
+    "camelize": "1.0.0",
+    "config": "^1.17.0",
+    "hashids": "1.0.2",
     "lodash": "^3.10.1",
     "log4js": "^0.6.24",
     "mysql": "^2.4.3",
     "knex": "^0.9.0",
     "koa": "latest",
     "koa-body": "latest",
-    "koa-convert": "latest"
+    "koa-cors": "0.0.16",
+    "koa-gzip": "0.1.0",
+    "koa-router": "5.1.2",
+    "koa-session": "3.3.1",
+    "underscore": "latest",
+    "underscore.string": "3.2.2"
   },
   "devDependencies": {
     "babel": "latest",
@@ -27,12 +34,14 @@
     "babel-cli": "latest",
     "babel-preset-stage-0": "latest",
     "jscs": "^1.10.0",
-    "jshint": "^2.6.0",
+    "jshint": "^2.9.1-rc1",
     "jshint-stylish": "^1.0.0",
-    "nodemon": "^1.8.1"
+    "nodemon": "^1.8.1",
+    "sql-fixtures": "0.11.0"
   },
   "scripts": {
-    "start": "nodemon --exec babel-node -- bin/www"
+    "db": "knex migrate:latest && node ./fixtures/create.js",
+    "dev": "nodemon --exec babel-node -- bin/www"
   },
   "keywords": [
     "event",

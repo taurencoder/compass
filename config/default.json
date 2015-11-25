@@ -1,6 +1,6 @@
 {
   "app": {
-    "jwtSecret": "bolt backend api",
+    "jwtSecret": "compass project",
     "cors": true,
     "port": 9000
   },
@@ -17,7 +17,7 @@
       "charset": "utf8",
       "user": "root",
       "password": "",
-      "database": "event_calendar",
+      "database": "bolt_compass",
       "timezone": "UTC"
     },
     "debug": false

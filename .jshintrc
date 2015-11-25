@@ -1,6 +1,7 @@
 {
   "node": true,
   "esnext": true,
+  "esnextnext": true,
   "bitwise": true,
   "curly": true,
   "expr": true,
