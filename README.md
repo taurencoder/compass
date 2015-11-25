@@ -3,6 +3,9 @@ Compass service
 
 This is a sample service using NodeJS, Koa
 
+Node.js 4.2.1
+mysql 5.6.26+
+
 Usage
 -------
 
