@@ -4,6 +4,7 @@
   "description": "mass event organize & management system",
   "main": "index.js",
   "babel": {
+    "presets": ["stage-0"],
     "ignore": [
       "foo.js",
       "bar/**/*.js"
@@ -24,6 +25,7 @@
     "babel": "latest",
     "babel-core": "^6.1.21",
     "babel-cli": "latest",
+    "babel-preset-stage-0": "latest",
     "jscs": "^1.10.0",
     "jshint": "^2.6.0",
     "jshint-stylish": "^1.0.0",
