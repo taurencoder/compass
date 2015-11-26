@@ -1,6 +1,6 @@
-var Hashids = require('hashids'),
-  hashids = new Hashids('Bolt hash secret', 16, '0123456789BCDFGHJKLMNPQRSTVWXYZ'),
-  _ = require('underscore');
+const Hashids = require('hashids');
+const hashids = new Hashids('Bolt hash secret', 16, '0123456789BCDFGHJKLMNPQRSTVWXYZ');
+const _ = require('lodash');
 
 exports.pad = function(num, size) {
   var result = num + '';
@@ -44,14 +44,14 @@ exports.hashid = function(originalId) {
 
 exports.camelize = function(attrs) {
   return _.reduce(attrs, function(memo, val, key) {
-    memo[_.str.camelize(key)] = val;
+    memo[_.camelCase(key)] = val;
     return memo;
   }, {});
 };
 
 exports.underscored = function(attrs) {
   return _.reduce(attrs, function(memo, val, key) {
-    memo[_.str.underscored(key)] = val;
+    memo[_.snakeCase(key)] = val;
     return memo;
   }, {});
 };

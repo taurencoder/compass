@@ -1,14 +1,10 @@
 const bookshelf = require('bookshelf');
 const knex = require('knex');
 const config = require('config');
-const _  = require('underscore');
+const _ = require('lodash');
 const utils = require('../utils/utils');
 const schema = require('../data/schema');
 var boltBookshelf;
-
-_.str = require('underscore.string');
-_.mixin(_.str.exports());
-_.str.include('Underscore.string', 'string');
 
 boltBookshelf = bookshelf(knex(config.database));
 boltBookshelf.plugin('registry');
@@ -65,7 +61,7 @@ boltBookshelf.Model = boltBookshelf.Model.extend({
     var camelizedAttrs = [];
     // Fix race condition between creating&format
     _.each(attrsArr, function(attr) {
-      camelizedAttrs.push(_.str.camelize(attr));
+      camelizedAttrs.push(_.camelCase(attr));
     });
     return attrsArr.concat(camelizedAttrs);
   },
