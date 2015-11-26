@@ -1,9 +1,9 @@
-var path = require('path');
-var fs = require('fs');
-var servicePath = path.join(__dirname, '../services');
-var modelPath = path.join(__dirname, '../models');
+const path = require('path');
+const fs = require('fs');
+const servicePath = path.join(__dirname, '../services');
+const modelPath = path.join(__dirname, '../models');
 
-var ServiceInitializer = {
+module.exports = {
   init: function() {
     // Init all services
     fs.readdirSync(servicePath).forEach(function(service) {
@@ -16,5 +16,3 @@ var ServiceInitializer = {
     });
   }
 };
-
-module.exports = ServiceInitializer;

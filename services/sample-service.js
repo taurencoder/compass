@@ -1,5 +1,5 @@
-var service = require('./service');
-var Sample = require('../models/sample').Sample;
+const service = require('./service');
+const Sample = require('../models/sample').Sample;
 
 var sampleService = service.extend({
   name: 'SampleService',

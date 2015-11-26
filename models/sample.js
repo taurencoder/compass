@@ -1,4 +1,4 @@
-var boltBookshelf = require('./base');
+const boltBookshelf = require('./base');
 
 var Sample = boltBookshelf.Model.extend({
   tableName: 'samples'
